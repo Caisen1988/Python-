@@ -1,8 +1,3 @@
-###Python 基础知识
-######1.列表
-> Python内置的一种数据类型是列表：list。list是一种有序的集合，可以随时添加和删除其中的元素。
-
-```
 # -*- coding: utf-8 -*- 
 classmates = ['Michael', 'Bob', 'Tracy']
 print classmates[0]
@@ -25,4 +20,3 @@ print len(s)
 p = ['asp', 'php']
 s = ['python', 'java', p, 'scheme']
 print s[2][1]
-```
