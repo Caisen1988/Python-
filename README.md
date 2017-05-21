@@ -1,6 +1,6 @@
-###Python 基础知识
-######1.列表
-> Python内置的一种数据类型是列表：list。list是一种有序的集合，可以随时添加和删除其中的元素。
+### Python 基础知识
+
+###### 1.列表 :Python内置的一种数据类型是列表：list。list是一种有序的集合，可以随时添加和删除其中的元素。
 
 ```
 # -*- coding: utf-8 -*- 
@@ -23,6 +23,6 @@ L = ['Apple', 123, True]      #list里面的元素的数据类型也可以不
 s = ['python', 'java', ['asp', 'php'], 'scheme']
 print len(s)
 p = ['asp', 'php']
-s = ['python', 'java', p, 'scheme']
+s = ['python', 'java', p, 'scheme']  #s可以看成是一个二维数组
 print s[2][1]
 ```
