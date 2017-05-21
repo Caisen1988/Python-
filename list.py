@@ -18,5 +18,5 @@ L = ['Apple', 123, True]      #list里面的元素的数据类型也可以不
 s = ['python', 'java', ['asp', 'php'], 'scheme']
 print len(s)
 p = ['asp', 'php']
-s = ['python', 'java', p, 'scheme']
+s = ['python', 'java', p, 'scheme']  #s可以看成是一个二维数组
 print s[2][1]
