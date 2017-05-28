@@ -160,3 +160,20 @@ abs()
 max()
 
 ```
+
+##### 8.切片
+
+```
+r = ['Michael', 'Sarah', 'Tracy']
+print(L[0:3])
+t = (0, 1, 2, 3, 4, 5)
+print(t[:3])
+```
+
+##### 9.迭代
+
+```
+d = {'a': 1, 'b': 2, 'c': 3}
+for key in d:
+    print(key)
+```
