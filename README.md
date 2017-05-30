@@ -3,7 +3,7 @@
 ###### 1.列表 :Python内置的一种数据类型是列表：list。list是一种有序的集合，可以随时添加和删除其中的元素。
 
 ```
-# -*- coding: utf-8 -*- 
+# -*- coding: utf-8 -*-
 classmates = ['Michael', 'Bob', 'Tracy']
 print classmates[0]
 print len(classmates)  #打印字符长度
@@ -30,8 +30,8 @@ print s[2][1]
 ###### 2.元组：tuple。tuple和list非常类似，但是tuple一旦初始化就不能修改
 
 ```
-# -*- coding: utf-8 -*- 
-#另一种有序列表叫# -*- coding: utf-8 -*- 
+# -*- coding: utf-8 -*-
+#另一种有序列表叫# -*- coding: utf-8 -*-
 #另一种有序列表叫元组：tuple。tuple和list非常类似，但是tuple一旦初始化就不能修改
 classmates = ('Michael', 'Bob', 'Tracy')
 t = (1)
@@ -57,7 +57,7 @@ print t
 
 ###### 3.循环
 ```
-# -*- coding: utf-8 -*- 
+# -*- coding: utf-8 -*-
 
 names = ['Michael', 'Bob', 'Tracy']
 for name in names:
@@ -176,4 +176,69 @@ print(t[:3])
 d = {'a': 1, 'b': 2, 'c': 3}
 for key in d:
     print(key)
+```
+
+##### 10.生成器
+创建L和g的区别仅在于最外层的[]和()，L是一个list，而g是一个generato
+可以直接打印出list的每一个元素,可以通过next()函数获得generator的下一个返回值
+如果一个函数定义中包含yield关键字，那么这个函数就不再是一个普通函数，而是一个generator
+generator和函数的执行流程不一样。函数是顺序执行，遇到return语句或者最后一行函数语句就返回。而变成generator的函数，在每次调用next()的时候执行，遇到yield语句返回，再次执行时从上次返回的yield语句处继续执行
+```
+# -*- coding: utf-8 -*-
+g = (x * x for x in range(10))
+for n in g:
+  print(n)
+
+
+def fib(max):
+   n, a, b = 0, 0, 1
+   while n < max:
+       print(b)
+       a, b = b, a + b
+       n = n + 1
+   return 'done'
+
+
+fib(6)
+
+def odd():
+   print('step 1')
+   yield 1
+   print('step 2')
+   yield(3)
+   print('step 3')
+   yield(5)
+
+o = odd()
+next(o)
+next(o)
+
+
+# -*- coding: utf-8 -*-
+
+def triangles():
+   L=[1]
+   while True:
+       yield(L)
+       L.append(0)
+       L = [L[n - 1] + L[n] for n in range(len(L))]
+# 期待输出:
+# [1]
+# [1, 1]
+# [1, 2, 1]
+# [1, 3, 3, 1]
+# [1, 4, 6, 4, 1]
+# [1, 5, 10, 10, 5, 1]
+# [1, 6, 15, 20, 15, 6, 1]
+# [1, 7, 21, 35, 35, 21, 7, 1]
+# [1, 8, 28, 56, 70, 56, 28, 8, 1]
+# [1, 9, 36, 84, 126, 126, 84, 36, 9, 1]
+n = 0
+for t in triangles():
+   print(t)
+   n = n + 1
+   if n == 10:
+       break
+
+
 ```
